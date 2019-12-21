@@ -4,18 +4,20 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import com.discoverer.livingRoomKotlin.databinding.ActivityLivingRoomBinding
 
 
 class LivingRoomActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_living_room)
+        val binding: ActivityLivingRoomBinding = DataBindingUtil.setContentView(this, R.layout.activity_living_room)
 
         val arguments = Arguments.createFromIntent(intent)
     }
 
-    class Arguments(val roomColor: String, val numOfRooms: Int) {
+    class Arguments(private val roomColor: String, private val numOfRooms: Int) {
 
         companion object {
 
