@@ -11,4 +11,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    fun enterLivingRoom() {
+        val arguments = LivingRoomActivity.Arguments("blue", 4)
+        arguments.startActivity(this)
+    }
+
 } // MainActivity class
