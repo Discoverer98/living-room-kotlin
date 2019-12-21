@@ -3,10 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LivingRoomActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <data>
+        <variable name="arguments" type="com.discoverer.livingRoomKotlin.LivingRoomActivity.Arguments"/>
+    </data>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@{arguments.roomColor}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:text="@{arguments.numOfRooms}"/>
+
+    </LinearLayout>
 
 </layout>

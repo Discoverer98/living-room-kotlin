@@ -13,11 +13,11 @@ class LivingRoomActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityLivingRoomBinding = DataBindingUtil.setContentView(this, R.layout.activity_living_room)
-
-        val arguments = Arguments.createFromIntent(intent)
+        binding.arguments = Arguments.createFromIntent(intent)
     }
 
-    class Arguments(private val roomColor: String, private val numOfRooms: Int) {
+
+    class Arguments(val roomColor: String, val numOfRooms: Int) {
 
         companion object {
 
