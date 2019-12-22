@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     class MainViewModel(private val context: Context) {
 
-        fun enterLivingRoom(view: View) {
-            val arguments = LivingRoomActivity.Arguments("blue", 4)
+        fun enterLivingRoom(roomColor: String?, numOfRoomsStr: String?) {
+            val arguments = LivingRoomActivity.Arguments(roomColor ?: "", Integer.parseInt(numOfRoomsStr))
             arguments.startActivity(context)
         }
 

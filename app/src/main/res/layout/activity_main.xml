@@ -60,7 +60,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Enter Living Room"
                 android:textAllCaps="false"
-                android:onClick="@{(view) -> mainViewModel.enterLivingRoom(view)"/>
+                android:onClick="@{() -> mainViewModel.enterLivingRoom(roomColorEdittext.getText().toString(), numberWallsEdittext.getText().toString())}"/>
 
         </LinearLayout>
 
