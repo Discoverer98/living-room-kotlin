@@ -33,7 +33,7 @@ class LivingRoomActivity : AppCompatActivity() {
         } // companion object
 
         fun startActivity(context: Context) {
-            val intent = Intent(context, Arguments::class.java)
+            val intent = Intent(context, LivingRoomActivity::class.java)
             intent.putExtra(ROOM_COLOR_TAG, roomColor)
             intent.putExtra(NUM_OF_WALLS_TAG, numOfRooms)
             context.startActivity(intent)
