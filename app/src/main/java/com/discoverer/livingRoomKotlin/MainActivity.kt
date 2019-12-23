@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity() {
     class MainViewModel(private val context: Context) {
 
         fun enterLivingRoom(roomColor: String?, numOfRoomsStr: String?) {
-            val arguments = LivingRoomActivity.Arguments(roomColor ?: "", Integer.parseInt(numOfRoomsStr))
+            val arguments = LivingRoomActivity.Arguments(
+                roomColor = roomColor ?: "", 
+                numOfRooms = Integer.parseInt(numOfRoomsStr ?: "0"))
             arguments.startActivity(context)
         }
 

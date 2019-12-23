@@ -26,8 +26,9 @@ class LivingRoomActivity : AppCompatActivity() {
             private const val DEFAULT_NUM_OF_WALLS = 4
 
             fun createFromIntent(intent: Intent): Arguments {
-                return Arguments(intent.getStringExtra(ROOM_COLOR_TAG), intent.getIntExtra(
-                    NUM_OF_WALLS_TAG, DEFAULT_NUM_OF_WALLS))
+                return Arguments(
+                    roomColor = intent.getStringExtra(ROOM_COLOR_TAG),
+                    numOfRooms = intent.getIntExtra(NUM_OF_WALLS_TAG, DEFAULT_NUM_OF_WALLS))
             }
 
         } // companion object
